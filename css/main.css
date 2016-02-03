@@ -1,0 +1,179 @@
+* {
+	margin 	: 0px;
+	padding : 0px;
+}
+
+*:focus {
+	outline :	none; 
+}
+
+#container {
+	border 		: 1px solid #f00;
+}
+
+.bandit {	
+	border 		: 1px solid #ff0;
+	width 		: 600px;
+}
+
+#actions {
+	display 	: block;
+	float 		: left;
+}
+
+.handle {
+	border 	: 1px solid #f00;
+	height 	: 100px;
+	width 	: 20px;
+}
+
+#reels {
+	border 					: 1px solid #0f0;
+	clear 					: both;
+	margin 					: 100px auto;
+}
+
+.reel {
+	border 				: 1px solid #00f;
+	border-radius : 6px;
+	height 				: 60px;
+	margin 				: 5px;
+	overflow 			: hidden;
+	width 				: 50px;
+}
+
+
+#sm {
+background: rgb(238,238,238);
+
+  width: 540px;
+  margin: 10px auto 20px;
+  padding: 20px;
+  border-radius: 50px;
+}
+
+#sm, .lever button {box-shadow: 0 3px 9px rgba(0,0,0,.25)}
+  .group, .reel, .lever {display: inline-block;}
+  .group, .lever {
+background: rgb(252,234,187);
+  }
+
+.group {
+  border-radius: 30px;
+  padding: 20px 0 20px 20px;
+}
+
+  .reel {
+	background 		: linear-gradient(#ccc, #fff 30%, #fff 70%, #ccc);
+
+    text-align:center;
+    float: left;
+    /*padding:0 10px;*/
+    width: 88px;
+    height: 100px;
+    overflow: hidden;
+    margin-right: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 7px rgba(0,0,0,.3) inset, 0 0px 1px rgba(0,0,0,.2) inset;
+  }
+    ./*reel div {
+      position: relative;
+      top: -48px;
+    }*/
+
+    .reel p {
+      font-weight: bold;
+      height: 60px;
+      margin-top: 10px;
+    }
+    .reel p:nth-child(1) {color:#c60}
+    .reel p:nth-child(2) {color:#690}
+    .reel p:nth-child(3) {color:#630}
+
+.lever {
+  float: right;
+  padding-right: 20px;
+}
+  .lever button {
+    text-align:center;
+    border-radius: 10px;
+    line-height: 100px;
+    width: 100px;
+    border: none;
+    font-size:1.8em;
+    transition: all .2s ease;
+  }
+
+  .lever button:active {
+    color: #900;
+    box-shadow: 0 1px 4px rgba(0,0,0,.3);
+    margin: 2px 0 -2px;
+  }
+
+      #stage {
+        margin: 80px auto;
+        width: 600px;
+        height: 100px;
+           -webkit-transition:all 1s;
+        -webkit-perspective: 5000;
+      }
+      
+      #rotate {
+        margin: 0 auto;
+        width: 600px;
+        height: 400px;
+        /* Ensure that we're in 3D space */
+        -webkit-transform-style: preserve-3d;
+     
+      }
+
+      .ring {
+        margin: 0 auto;
+        height: 110px;
+        width: 600px;
+        -webkit-transform-style: preserve-3d;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-timing-function: linear;
+           -webkit-transition:all 1s;
+      
+      }
+      
+      .ring > :nth-child(odd) {
+        background-color: #995C7F;
+      }
+
+      .ring > :nth-child(even) {
+        background-color: #835A99;
+      }
+
+      .poster {
+        position: absolute;
+        left: 250px;
+        width: 100px;
+        height: 100px;
+        opacity: 1;
+        color: rgba(0,0,0,1);
+        -webkit-border-radius: 10px;
+      }
+      .a {
+        transform: rotateX(0deg) translateZ(40px); 
+      }
+      .b {
+        transform: rotateX(120deg) translateZ(40px); 
+      }
+      .c {
+        transform: rotateX(240deg) translateZ(40px); 
+      }
+      
+      .done {
+        transform: rotate(0deg);
+      }
+      
+      .poster > p {
+        font-family: 'Georgia', serif;
+        font-size: 36px;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 28px;
+      }
+
