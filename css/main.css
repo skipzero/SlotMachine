@@ -4,13 +4,14 @@ body {
 }
 
 #stage {
-  width: 300px;
-  height: 100px;
-  -webkit-perspective: 5000;
+  width: 400px;
+  height: 80px;
+  -webkit-perspective: 0px;
+  overflow: hidden;
 }
 
 #rotate {
-  margin: 0 auto;
+  margin: 0 5px;
   width: 100px;
   height: 100px;
   transform-style: preserve-3d;
@@ -20,10 +21,10 @@ body {
 .ring {
   margin: 0 auto;
   height: 110px;
-  width: 600px;
-  -webkit-transform-style: preserve-3d;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
+  width: 400px;
+  transform-style: preserve-3d;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
 .ring > :nth-child(odd) {
@@ -36,25 +37,21 @@ body {
 
 .poster {
   position: absolute;
-  left: 250px;
+  left: 10px;
   width: 100px;
   height: 100px;
   opacity: 1;
   color: rgba(0,0,0,1);
-  -webkit-border-radius: 10px;
-}
-.a {
-  transform: rotateX(0deg) translateZ(40px); 
-}
-.b {
-  transform: rotateX(120deg) translateZ(40px); 
-}
-.c {
-  transform: rotateX(240deg) translateZ(40px); 
 }
 
-.done {
-  transform: rotate(0deg);
+.a {
+  transform: rotateX(0deg) translateZ(28px); 
+}
+.b {
+  transform: rotateX(-120deg) translateZ(28px); 
+}
+.c {
+  transform: rotateX(-240deg) translateZ(28px); 
 }
 
 .poster > p {
@@ -65,26 +62,28 @@ body {
   margin-top: 28px;
 }
 
-#ring-1 {
+#ring-1, #ring-2, #ring-3 {
   animation-name: x-spin;
-  animation-duration: .2s; 
+}
+
+#ring-1 {
+  animation-duration: 0.1s;
   
 }
 
 #ring-2 {
-  animation-name: x-spin;
-  animation-duration: 7s;
+  animation-duration: 3.8s;
 }
 
 #ring-3 {
-  animation-name: x-spin;
-  animation-duration: 15s;
+  animation-duration: 5s;
 }
 
 @keyframes x-spin {
-  0%    { -webkit-transform: rotateX(0deg); }
-  50%   { -webkit-transform: rotateX(120deg); }
-  100%  { -webkit-transform: rotateX(240deg); }
+  0%   { transform: rotateX(0deg) }
+  33%  { transform: rotateX(-120deg) }
+  66%  { transform: rotateX(-240deg) }
+  100% { transform: rotateX(-360deg) }
 }
 
 
