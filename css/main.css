@@ -4,32 +4,17 @@ body {
 }
 
 #stage {
-  margin: 80px auto;
-  width: 600px;
-  height: 400px;
-  /*
-  
-  Setting the perspective of the contents of the stage
-  but not the stage itself
-  
-  */
+  width: 300px;
+  height: 100px;
   -webkit-perspective: 5000;
 }
 
 #rotate {
   margin: 0 auto;
-  width: 600px;
-  height: 400px;
-  /* Ensure that we're in 3D space */
-  -webkit-transform-style: preserve-3d;
-  /*
-  Make the whole set of rows use the x-axis spin animation
-  for a duration of 7 seconds, running infinitely and linearly
-  */
- /* -webkit-animation-name: x-spin;
-  -webkit-animation-duration: 7s;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;*/
+  width: 100px;
+  height: 100px;
+  transform-style: preserve-3d;
+  float: left;
 }
 
 .ring {
@@ -80,27 +65,23 @@ body {
   margin-top: 28px;
 }
 
-/*
-Set up each row to have a different animation duration
-and alternating y-axis rotation directions.
-*/
 #ring-1 {
-  -webkit-animation-name: x-spin;
-   -webkit-animation-duration: 2.6s; 
+  animation-name: x-spin;
+  animation-duration: .2s; 
   
 }
 
 #ring-2 {
-  -webkit-animation-name: x-spin;
-  -webkit-animation-duration: 4s;
+  animation-name: x-spin;
+  animation-duration: 7s;
 }
 
 #ring-3 {
-  -webkit-animation-name: x-spin;
-  -webkit-animation-duration: 3s;
+  animation-name: x-spin;
+  animation-duration: 15s;
 }
 
-@-webkit-keyframes x-spin {
+@keyframes x-spin {
   0%    { -webkit-transform: rotateX(0deg); }
   50%   { -webkit-transform: rotateX(120deg); }
   100%  { -webkit-transform: rotateX(240deg); }
