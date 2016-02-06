@@ -11,7 +11,7 @@ body {
 }
 
 #rotate {
-  margin: 0 5px;
+  margin: 0 5px 0 0;
   width: 100px;
   height: 100px;
   transform-style: preserve-3d;
@@ -19,6 +19,7 @@ body {
 }
 
 .ring {
+  background: #fff;
   margin: 0 auto;
   height: 110px;
   width: 400px;
@@ -27,21 +28,22 @@ body {
   animation-timing-function: linear;
 }
 
-.ring > :nth-child(odd) {
+/*.ring > :nth-child(odd) {
   background-color: #995C7F;
 }
 
 .ring > :nth-child(even) {
   background-color: #835A99;
-}
+}*/
 
 .poster {
   position: absolute;
-  left: 10px;
+  left: 0px;
   width: 100px;
   height: 100px;
   opacity: 1;
   color: rgba(0,0,0,1);
+border: 1px solid #f00;  
 }
 
 .a {
