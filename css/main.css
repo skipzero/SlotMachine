@@ -5,12 +5,13 @@ body {
 
 #stage {
   width: 400px;
-  height: 80px;
+  height: 100px;
   -webkit-perspective: 0px;
   overflow: hidden;
 }
 
 #rotate {
+  /*background: linear-gradient(#ddd 0%, #fff 40%, #fff 60%, #ddd);*/
   margin: 0 5px 0 0;
   width: 100px;
   height: 100px;
@@ -19,13 +20,12 @@ body {
 }
 
 .ring {
-  background: #fff;
   margin: 0 auto;
-  height: 110px;
-  width: 400px;
+  height: 100px;
   transform-style: preserve-3d;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
+  border: 1px solid #0f0;
 }
 
 /*.ring > :nth-child(odd) {
@@ -37,23 +37,24 @@ body {
 }*/
 
 .poster {
+  background: #fff;
   position: absolute;
   left: 0px;
   width: 100px;
   height: 100px;
   opacity: 1;
-  color: rgba(0,0,0,1);
-border: 1px solid #f00;  
+  color: #000;
+border: 1px solid #f00;
 }
 
 .a {
-  transform: rotateX(0deg) translateZ(28px); 
+  transform: rotateX(0deg) translateZ(30px); 
 }
 .b {
-  transform: rotateX(-120deg) translateZ(28px); 
+  transform: rotateX(120deg) translateZ(30px); 
 }
 .c {
-  transform: rotateX(-240deg) translateZ(28px); 
+  transform: rotateX(240deg) translateZ(30px); 
 }
 
 .poster > p {
@@ -69,23 +70,23 @@ border: 1px solid #f00;
 }
 
 #ring-1 {
-  animation-duration: 0.1s;
+  animation-duration: 0.25s;
   
 }
 
 #ring-2 {
-  animation-duration: 3.8s;
+  animation-duration: 5s;
 }
 
 #ring-3 {
-  animation-duration: 5s;
+  animation-duration: 10s;
 }
 
 @keyframes x-spin {
   0%   { transform: rotateX(0deg) }
-  33%  { transform: rotateX(-120deg) }
-  66%  { transform: rotateX(-240deg) }
-  100% { transform: rotateX(-360deg) }
+  50%  { transform: rotateX(120deg) }
+  100%  { transform: rotateX(240deg) }
+  /*100% { transform: rotateX(-360deg) }*/
 }
 
 
